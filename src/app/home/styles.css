@@ -1,0 +1,16 @@
+#header {
+	-fx-background-color: #e0e0e0;
+}
+
+#labelProjectPresentname {
+	-fx-font: 20px "Yu Gothic UI Light";
+}
+
+#labelProjectName {
+	-fx-font: 12px "Yu Gothic UI Light";
+	-fx-padding: 2px 0 0 5px;
+}
+
+#toolbarProjectCommands *.button {
+	-fx-base: #d9e5f4;
+}

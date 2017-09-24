@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+
+<SplitPane id="bodyroot" dividerPositions="0.30165289256198347, 0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="315.0" prefWidth="365.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+      <ToolBar id="toolbar" onMouseDragged="#toolbar_onMouseDragged" onMousePressed="#toolbar_onMousePressed" prefHeight="20.0" prefWidth="361.0">
+        <items>
+            <Pane id="toolbar-favicon" prefHeight="0.0" prefWidth="24.0" />
+          <Pane id="toolbar-title" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label id="toolbar-title-label" layoutX="105.0" layoutY="4.0" text="%toolbar-title-label">
+                     <font>
+                        <Font name="Yu Gothic UI Semilight" size="12.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+          <Button id="buttonMinimize" disable="true" focusTraversable="false" mnemonicParsing="false" styleClass="toolbar-title-button" textFill="#470001">
+               <font>
+                  <Font name="Corbel" size="14.0" />
+               </font></Button>
+            <Button id="buttonMaximize" disable="true" focusTraversable="false" mnemonicParsing="false" styleClass="toolbar-title-button" textFill="#470001">
+               <font>
+                  <Font name="Corbel" size="14.0" />
+               </font>
+            </Button>
+            <Button id="buttonClose" focusTraversable="false" mnemonicParsing="false" onAction="#buttonClose_onAction" styleClass="toolbar-title-button" textFill="#470001">
+               <font>
+                  <Font name="Corbel" size="14.0" />
+               </font>
+            </Button>
+        </items>
+      </ToolBar>
+    <AnchorPane id="titlepane" minHeight="0.0" minWidth="0.0" onMousePressed="#bodypane_onMousePressed" prefHeight="99.0" prefWidth="598.0">
+         <children>
+            <Label id="titlepane-label" layoutX="91.0" layoutY="7.0" text="%titlepane-label" textAlignment="CENTER" />
+         </children></AnchorPane>
+    <AnchorPane id="bodypane" fx:id="bodypane" minHeight="0.0" minWidth="0.0" onMousePressed="#bodypane_onMousePressed" prefHeight="133.0" prefWidth="363.0">
+         <children>
+            <Button id="buttonLogin" focusTraversable="false" layoutX="64.0" layoutY="122.0" mnemonicParsing="false" onAction="#buttonLogin_onAction" text="%buttonLogin.text">
+               <font>
+                  <Font name="Yu Gothic UI Regular" size="12.0" />
+               </font></Button>
+            <Button id="buttonOfflineMode" focusTraversable="false" layoutX="261.0" layoutY="147.0" mnemonicParsing="false" onAction="#buttonOfflineMode_onAction" text="%buttonOfflineMode.text" />
+            <CheckBox id="checkboxRememberMe" focusTraversable="false" layoutX="120.0" layoutY="126.0" mnemonicParsing="false" text="%checkboxLogin.text" />
+            <TextField id="textfieldUsername" focusTraversable="false" layoutX="65.0" layoutY="62.0" prefHeight="25.0" prefWidth="235.0" promptText="%textfieldUsername.prompt" />
+            <TextField id="textfieldPassword" focusTraversable="false" layoutX="64.0" layoutY="91.0" prefHeight="25.0" prefWidth="235.0" promptText="%textfieldPassword.prompt" />
+            <Label id="bodypane-description" layoutX="42.0" layoutY="14.0" text="%bodypane-description" textAlignment="CENTER" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
